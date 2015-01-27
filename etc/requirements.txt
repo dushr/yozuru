@@ -1,8 +1,13 @@
 beautifulsoup4==4.3.2
 Django==1.7.4
+django-debug-toolbar==1.2.2
 django-htmlmin==0.7.0
+django-markdown==0.8.4
 django-redis-cache==0.13.0
+django-suit==0.2.12
 hiredis==0.1.5
 html5lib==0.999
+Markdown==2.5.2
 redis==2.10.3
 six==1.9.0
+sqlparse==0.1.14

@@ -17,6 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 INSTALLED_APPS = (
     # django apps
+    'suit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -24,11 +25,16 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # external apps
-
+    'debug_toolbar',  # for dev only
+    'django_markdown',
     # yozuru apps
+    'api',
+    'auth_app',
+    'blog',
 )
 
 MIDDLEWARE_CLASSES = (
+    # 'django.middleware.cache.UpdateCacheMiddleware',
     'htmlmin.middleware.HtmlMinifyMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -88,3 +94,41 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 HTML_MINIFY = True
 
 KEEP_COMMENTS_ON_MINIFYING = True
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs', 'debug.log'),
+        },
+    },
+
+    'loggers': {
+        'django.request': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+            'formatter': 'verbose'
+        },
+    },
+}
+
+SUIT_CONFIG = {
+    'ADMIN_NAME': 'Yozuru admin',
+    'SHOW_REQUIRED_ASTERISK': True,
+    'MENU_ICONS': {
+        'api': 'icon-tags',
+        'auth': 'icon-lock'
+    }
+}
