@@ -1,0 +1,12 @@
+{% extends 'shared/base.html' %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+{% for object in object_list %}
+<div class="project">
+  <h2><a href="{% url "project_detail" slug=object.slug %}">{{ object.title }}</a></h2>
+  {{ object.body }}
+</div>
+{% endfor %}
+{% endblock %}

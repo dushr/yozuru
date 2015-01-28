@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.conf.urls import handler404, handler500
 
 from django.contrib import admin
+import static_pages.views as page
 
 urlpatterns = patterns(
     '',
@@ -18,7 +19,10 @@ urlpatterns = patterns(
     url(r'^markdown/', include('django_markdown.urls')),
 
     # yozuru apps views
-    url(r'^', include('blog.urls'))
+    url(r'^', include('blog.urls')),
+    url(r'^projects/', include('projects.urls')),
+
+    url(r'^about/', page.About.as_view(), name='about'),
 )
 
 

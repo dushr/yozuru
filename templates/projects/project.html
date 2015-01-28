@@ -1,0 +1,10 @@
+{% extends 'shared/base.html' %}
+{% block title %}{{ object.title }}{% endblock %}
+
+{% block content %}
+<div class="project">
+  <h2>{{ object.title }}</h2>
+    {{ object.body }}
+    {{ object.content }}
+</div>
+{% endblock %}

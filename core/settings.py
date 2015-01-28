@@ -31,6 +31,8 @@ INSTALLED_APPS = (
     'api',
     'auth_app',
     'blog',
+    'projects',
+    'static_pages',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -68,9 +70,9 @@ ROOT_URLCONF = 'core.urls'
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pl-PL'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Warsaw'
 
 USE_I18N = True
 

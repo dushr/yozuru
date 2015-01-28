@@ -9,6 +9,10 @@ class BlogIndex(generic.ListView):
     paginate_by = 6
 
 
+class BlogDetail(generic.DetailView):
+    model = models.Entry
+    template_name = "blog/post.html"
+
 # Custom error pages
 
 

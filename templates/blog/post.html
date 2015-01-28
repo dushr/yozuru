@@ -1,0 +1,14 @@
+{% extends "shared/base.html" %}
+{% load django_markdown %}
+
+{% block title %}{{ object.title }}{% endblock %}
+
+{% block content %}
+<div class="post">
+  <h2>{{ object.title }}</h2>
+  <p class="meta">
+    {{ object.created|date:"d-m-Y H:i" }}
+  </p>
+  {{ object.body|markdown }}
+</div>
+{% endblock %}
