@@ -47,16 +47,16 @@ TODO
 * Login to your app via `youraddress/login` and add content. Enjoy!
  
  
- ## TODO: 
+## TODO: 
  
- - Likes
- 
- - Entry views counter
- 
- - Add static files && templates
- 
- - Add cache
- 
- - Add scripts + readme content
- 
- - Configure project for production mode
+- Likes
+
+- Entry views counter // django-visits 
+
+- Add static files && templates
+
+- Add cache
+
+- Add scripts + readme content
+
+- Configure project for production mode

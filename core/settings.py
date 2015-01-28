@@ -29,6 +29,7 @@ INSTALLED_APPS = (
     # external apps
     'debug_toolbar',  # for dev only
     'django_markdown',
+    'visits',
     # yozuru apps
     'api',
     'auth_app',
@@ -50,6 +51,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware',
+    "visits.middleware.CounterMiddleware",
     'htmlmin.middleware.MarkRequestMiddleware',
 )
 
@@ -138,3 +140,5 @@ SUIT_CONFIG = {
         'auth': 'icon-lock'
     }
 }
+
+URI_WITH_GET_PARAMS = True

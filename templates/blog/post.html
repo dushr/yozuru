@@ -1,5 +1,6 @@
 {% extends "shared/base.html" %}
 {% load django_markdown %}
+{% load visits_tags %}
 
 {% block title %}{{ object.title }}{% endblock %}
 
@@ -7,7 +8,8 @@
 <div class="post">
   <h2>{{ object.title }}</h2>
   <p class="meta">
-    {{ object.created|date:"d-m-Y H:i" }}
+    {{ object.created|date:"d-m-Y H:i" }} | {% get_visits object as visits %}
+    {{ visits.Visits }}
   </p>
   {{ object.body|markdown }}
 </div>
