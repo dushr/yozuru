@@ -9,7 +9,6 @@
   <h2>{{ object.title }}</h2>
   <p class="meta">
     {{ object.created|date:"d-m-Y H:i" }} | {% get_visits object as visits %}
-    {{ visits.Visits }}
   </p>
   {{ object.body|markdown }}
 </div>

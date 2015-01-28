@@ -51,7 +51,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware',
-    "visits.middleware.CounterMiddleware",
+    'visits.middleware.CounterMiddleware',
     'htmlmin.middleware.MarkRequestMiddleware',
 )
 
@@ -68,6 +68,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
+    'visits.context_processors.request_meta',
+
 )
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
