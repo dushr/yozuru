@@ -3,6 +3,7 @@ from django.conf.urls import handler404, handler500
 
 from django.contrib import admin
 import static_pages.views as page
+from blog.sitemap import sitemaps
 
 urlpatterns = patterns(
     '',
@@ -14,6 +15,7 @@ urlpatterns = patterns(
     url(r'^admin/', include(admin.site.urls)),
     url(r'^login/', 'auth_app.views.user_login', name='login'),
     url(r'^logout/', 'auth_app.views.user_logout', name='logout'),
+    url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
 
     # external apps
     url(r'^markdown/', include('django_markdown.urls')),

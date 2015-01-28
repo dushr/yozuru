@@ -24,6 +24,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     # external apps
     'debug_toolbar',  # for dev only
     'django_markdown',
@@ -34,6 +36,8 @@ INSTALLED_APPS = (
     'projects',
     'static_pages',
 )
+
+SITE_ID = 1
 
 MIDDLEWARE_CLASSES = (
     # 'django.middleware.cache.UpdateCacheMiddleware',

@@ -46,3 +46,17 @@ TODO
 
 * Login to your app via `youraddress/login` and add content. Enjoy!
  
+ 
+ ## TODO: 
+ 
+ - Likes
+ 
+ - Entry views counter
+ 
+ - Add static files && templates
+ 
+ - Add cache
+ 
+ - Add scripts + readme content
+ 
+ - Configure project for production mode
