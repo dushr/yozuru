@@ -8,7 +8,8 @@
 <div class="post">
   <h2>{{ object.title }}</h2>
   <p class="meta">
-    {{ object.created|date:"d-m-Y H:i" }} | {% get_visits object as visits %}
+    {{ object.created|date:"d-m-Y H:i" }} | {% get_visits request.get_full_path as visits %}
+    {{ visits }}
   </p>
   {{ object.body|markdown }}
 </div>
